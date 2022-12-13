@@ -1,5 +1,6 @@
 from pages.main_page import MainPage
 from pages.search_results_page import SearchResultsPage
+from pages.acne_page import AcnePage
 
 
 class Application:
@@ -8,5 +9,6 @@ class Application:
         self.driver = driver
         self.main_page = MainPage(self.driver)
         self.search_results_page = SearchResultsPage(self.driver)
+        self.acne_page = AcnePage(self.driver)
 
 
