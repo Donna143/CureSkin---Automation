@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 from pages.base_page import Page
 from selenium.webdriver.common.action_chains import ActionChains
-from time import sleep
 
 
 class MainPage(Page):
@@ -18,7 +17,6 @@ class MainPage(Page):
         self.find_element(*self.SEARCH_BTN).click()
         self.input_text(search_word, *self.SEARCH_INPUT)
         self.find_element(*self.SEARCH_SUBMIT).click()
-        # sleep(4)
 
     def click_concern_acne(self):
         concern = self.find_element(*self.SHOP_CONCERN)
