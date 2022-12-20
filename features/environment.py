@@ -21,8 +21,8 @@ def browser_init(context, test_name):
     :param context: Behave context
     :param test_name: scenario.name
     """
-    context.driver = webdriver.Chrome(executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/chromedriver.exe')
-    # context.driver = webdriver.Firefox(executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/geckodriver.exe')
+    # context.driver = webdriver.Chrome(executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/chromedriver.exe')
+    context.driver = webdriver.Firefox(executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/geckodriver.exe')
     # context.driver = webdriver.Firefox(executable_path='/Users/svetlanalevinsohn/JobEasy/11-python-selenium-automation/geckodriver')
     # context.driver = webdriver.Safari()
 
@@ -32,6 +32,13 @@ def browser_init(context, test_name):
     # context.driver = webdriver.Chrome(
     #     chrome_options=options,
     #     executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/chromedriver.exe'
+    # )
+
+    # options = webdriver.FirefoxOptions()
+    # options.headless = True
+    # context.driver = webdriver.Firefox(
+    #     options=options,
+    #     executable_path='C:/Users/thebe/Documents/Careerist/Automation/python-selenium-automation/geckodriver.exe'
     # )
 
     ### EventFiringWebDriver - log file ###
