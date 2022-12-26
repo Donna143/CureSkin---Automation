@@ -74,7 +74,7 @@ def browser_init(context, test_name):
             "deviceName": "Samsung Galaxy S20",
             "projectName": "CureSkin - Automation",
             "buildName": "Mobile",
-            "sessionName": "iPhone 14",
+            "sessionName": "Android: Samsung Galaxy S20",
             "local": "false",
         },
     }
