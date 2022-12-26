@@ -6,3 +6,8 @@ Feature: Tests for CureSkin main page
     When Click to Shop by Concern - Select Acne
     Then For Acne is shown
 
+  Scenario: User can shop by concern on Mobile
+    Given Open main page
+    When Click on Hamburger
+    When Mobile Click to Shop by Concern - Select Acne
+    Then For Acne is shown

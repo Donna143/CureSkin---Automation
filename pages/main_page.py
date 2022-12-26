@@ -8,7 +8,10 @@ class MainPage(Page):
     SEARCH_INPUT = (By.ID, 'Search-In-Modal')
     SEARCH_SUBMIT = (By.CSS_SELECTOR, '.search__button.field__button .icon.icon-search')
     SHOP_CONCERN = (By.ID, 'Details-HeaderMenu-1')
+    SHOP_CONCERN_MOBILE = (By.ID, 'Details-menu-drawer-menu-item-1')
     CATEGORY_ACNE = (By.XPATH, "//ul[@id='HeaderMenu-MenuList-1']//a[contains(text(), 'Acne')]")
+    CATEGORY_ACNE_MOBILE = (By.XPATH, "//div[@id='link-Shop by Concern']//a[contains(text(), 'Acne')]")
+    HAMBURGER = (By.ID, 'Details-menu-drawer-container')
 
     def open_google(self):
         self.open_url()
@@ -18,6 +21,9 @@ class MainPage(Page):
         self.input_text(search_word, *self.SEARCH_INPUT)
         self.find_element(*self.SEARCH_SUBMIT).click()
 
+    def click_hamburger(self):
+        self.find_element(*self.HAMBURGER).click()
+
     def click_concern_acne(self):
         concern = self.find_element(*self.SHOP_CONCERN)
         category = self.find_element(*self.CATEGORY_ACNE)
@@ -26,4 +32,11 @@ class MainPage(Page):
         actions.click(category)
         actions.perform()
 
+    def mobile_click_concern_acne(self):
+        concern = self.find_element(*self.SHOP_CONCERN_MOBILE)
+        category = self.find_element(*self.CATEGORY_ACNE_MOBILE)
+        actions = ActionChains(self.driver)
+        actions.click(concern)
+        actions.click(category)
+        actions.perform()
 
